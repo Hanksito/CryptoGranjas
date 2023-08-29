@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { CardImage } from './Card';
 import gato from "../assets/img/Yuta-con-gafas.png"
 const NavbarContainer = styled.div`
   background-color: black;
@@ -18,9 +17,7 @@ const NavbarContainer = styled.div`
   margin-bottom: 15px;
 `;
 
-const Brand = styled.div`
-  font-size: 1.5rem;
-`;
+
 
 const Button = styled.button`
   background-color: green;
