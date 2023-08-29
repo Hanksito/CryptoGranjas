@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { styled } from "styled-components"
 import Card from "./components/Card"
-import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+
 
 
 
@@ -67,16 +69,19 @@ function App() {
   }, []);
 
   return (
-    <AppContainer >
-      <VideoBackground id="VideoBackground" autoPlay loop muted>
-      <source src="../src/assets/video/backgroundvideo.mp4" type="video/mp4" />
-      </VideoBackground>
-      <Content>
-        {pruebas.map(granja =>(
-          <Card {...granja}/>
-        ))}
-      </Content>
-    </AppContainer>
+    <>
+      <Navbar/>
+      <AppContainer >
+        <VideoBackground id="VideoBackground" autoPlay loop muted>
+        <source src="../src/assets/video/backgroundvideo.mp4" type="video/mp4" />
+        </VideoBackground>
+        <Content>
+          {pruebas.map(granja =>(
+            <Card {...granja}/>
+          ))}
+        </Content>
+      </AppContainer>
+    </>
   )
 }
 export const AppContainer = styled.div`
@@ -102,6 +107,7 @@ const Content = styled.div`
   overflow-y: auto; 
   padding: 20px; 
   justify-content: space-evenly;
+  margin-top: 25px;
 `;
 
 export default App

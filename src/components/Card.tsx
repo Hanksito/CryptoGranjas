@@ -35,7 +35,7 @@ const CardWrapper = styled.div`
   }
 `;
 
-const CardImage = styled.img`
+export const CardImage = styled.img`
   max-width: 100%;
   object-fit: contain;
   height: auto;
